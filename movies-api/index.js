@@ -2,7 +2,7 @@ import './db';
 // other imports
 import cors from 'cors';
 import moviesRouter from './api/movies';   
-
+import usersRouter from './api/users';
 import dotenv from 'dotenv';
 import express from 'express';
 
@@ -32,6 +32,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.use('/api/movies', moviesRouter); 
+app.use('/api/users', usersRouter);
 
 app.use(errHandler);
 
