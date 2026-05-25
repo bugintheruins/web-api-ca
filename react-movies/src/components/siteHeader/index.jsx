@@ -11,10 +11,12 @@ import { useNavigate } from "react-router";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import {AuthContext} from '../../contexts/authContext'
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 const SiteHeader = () => {
+//  const context = useContext(AuthContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
